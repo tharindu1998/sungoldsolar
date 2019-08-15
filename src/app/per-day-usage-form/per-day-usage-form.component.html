@@ -1,0 +1,351 @@
+<div class="container">
+  <form [formGroup]="perdayusageform">
+    <div class="card shadow">
+      <div class="card-body">
+        <div class="tab-pane fade show active">
+          <h2 class="">Per Day Usage Form</h2>
+          <p>Instructions to follow when completing the following form,</p>
+          <ul class="list-unstyled mt-5">
+            <li class="py-2">
+              <div class="d-flex align-items-center">
+                <div>
+                  <div class="badge badge-circle badge-warning mr-3">
+                    <i class="ni ni-settings-gear-65"></i>
+                  </div>
+                </div>
+                <div>
+                  <h6 class="mb-0">Select one product.</h6>
+                </div>
+              </div>
+            </li>
+            <li class="py-2">
+              <div class="d-flex align-items-center">
+                <div>
+                  <div class="badge badge-circle badge-warning mr-3">
+                    <i class="ni ni-settings-gear-65"></i>
+                  </div>
+                </div>
+                <div>
+                  <h6 class="mb-0">Enter the number of products in the count section</h6>
+                </div>
+              </div>
+            </li>
+            <li class="py-2">
+              <div class="d-flex align-items-center">
+                <div>
+                  <div class="badge badge-circle badge-warning mr-3">
+                    <i class="ni ni-settings-gear-65"></i>
+                  </div>
+                </div>
+                <div>
+                  <h6 class="mb-0">Enter the number of Hours per day</h6>
+                </div>
+              </div>
+            </li>
+            <li class="py-2">
+              <div class="d-flex align-items-center">
+                <div>
+                  <div class="badge badge-circle badge-warning mr-3">
+                    <i class="ni ni-settings-gear-65"></i>
+                  </div>
+                </div>
+                <div>
+                  <h6 class="mb-0">Enter the watt capacity</h6>
+                </div>
+              </div>
+            </li>
+            <li class="py-2">
+              <div class="d-flex align-items-center">
+                <div>
+                  <div class="badge badge-circle badge-warning mr-3">
+                    <i class="ni ni-settings-gear-65"></i>
+                  </div>
+                </div>
+                <div>
+                  <h6 class="mb-0">Press "ADD" button to add a single item.Add all the items in your home and press
+                    "SUBMIT" to complete the process</h6>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="row">
+            <div class="container " style="text-align:center">
+              <div class="row">
+
+                <div class="col-lg-3 col-sm-6">
+                  <div class="form-group">
+
+                    <input type="number" placeholder="count" formControlName="count" class="form-control" />
+
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                  <div class="form-group">
+
+                    <input type="number" placeholder="watt" formControlName="watt" class="form-control" />
+
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                  <div class="form-group">
+
+                    <input type="number" placeholder="hours used per day" formControlName="hrs" class="form-control" />
+
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                  <button class="btn btn-1 btn-warning" [disabled]="perdayusageform.invalid" (click)="addItem()" type="button">ADD</button>
+                </div>
+
+
+              </div>
+
+
+            </div>
+
+          </div>
+
+          <br>
+          <br>
+          <div class="row">
+            <div class="col-6">
+              <perfect-scrollbar style="max-width: 600px; min-height: 400px;">
+
+
+
+                <div class="custom-control custom-radio mb-3">
+                  <input name="item" class="custom-control-input" id="item1" type="radio" value="Refrigerator"
+                    formControlName="item">
+                  <label class="custom-control-label" for="item1">
+                    <span>Refrigerator</span>
+                  </label>
+                </div>
+
+
+                <div class="custom-control custom-radio mb-3">
+                  <input name="item" class="custom-control-input" id="item2" type="radio" value="A/C" formControlName="item">
+                  <label class="custom-control-label" for="item2">
+                    <span>A/C</span>
+                  </label>
+                </div>
+
+                <div class="custom-control custom-radio mb-3">
+                  <input name="item" class="custom-control-input" id="item3" type="radio" value="Bulb" formControlName="item">
+                  <label class="custom-control-label" for="item3">
+                    <span>Bulb</span>
+                  </label>
+                </div>
+
+                <div class="custom-control custom-radio mb-3">
+                  <input name="item" class="custom-control-input" id="item4" type="radio" value="Water pump"
+                    formControlName="item">
+                  <label class="custom-control-label" for="item4">
+                    <span>Water pump</span>
+                  </label>
+                </div>
+
+
+                <div class="custom-control custom-radio mb-3">
+                  <input name="item" class="custom-control-input" id="item5" type="radio" value="Fan" formControlName="item">
+                  <label class="custom-control-label" for="item5">
+                    <span>Fan</span>
+                  </label>
+                </div>
+
+                <div class="custom-control custom-radio mb-3">
+                  <input name="item" class="custom-control-input" id="item6" type="radio" value="Rice Cooker"
+                    formControlName="item">
+                  <label class="custom-control-label" for="item6">
+                    <span>Rice Cooker</span>
+                  </label>
+                </div>
+
+                <div class="custom-control custom-radio mb-3">
+                  <input name="item" class="custom-control-input" id="item7" type="radio" value="TV" formControlName="item">
+                  <label class="custom-control-label" for="item7">
+                    <span>TV</span>
+                  </label>
+                </div>
+
+                <div class="custom-control custom-radio mb-3">
+                  <input name="item" class="custom-control-input" id="item8" type="radio" value="Electric Bike"
+                    formControlName="item">
+                  <label class="custom-control-label" for="item8">
+                    <span>Electric Bike</span>
+                  </label>
+                </div>
+
+                <div class="custom-control custom-radio mb-3">
+                  <input name="item" class="custom-control-input" id="item9" type="radio" value="Electric Car"
+                    formControlName="item">
+                  <label class="custom-control-label" for="item9">
+                    <span>Electric Car</span>
+                  </label>
+                </div>
+
+                <div class="custom-control custom-radio mb-3">
+                  <input name="item" class="custom-control-input" id="item10" type="radio" value="Heater"
+                    formControlName="item">
+                  <label class="custom-control-label" for="item10">
+                    <span>Heater</span>
+                  </label>
+                </div>
+
+
+
+              </perfect-scrollbar>
+
+            </div>
+            <div class="col-6  ">
+              <img src="../../assets/img/list.png" class="list">
+              <!-- <input list="browsers"  name="browser" placeholder="Items added will be displayed here" class="form-control"
+                style="height:400px"> -->
+              <perfect-scrollbar style="max-width: 100%; max-height: 350px;">
+
+                <table width="100%" style="width:100%">
+                  
+
+                    <tr  *ngFor="let i of items" style="width:100%">
+                      <td  width="70%" style="width:7;  padding: 8px; padding-bottom: 0px">
+                        <p style="width: 100%; margin-bottom: 0px">{{i.watt}} W, {{i.count}} <strong>{{i.item}}/s</strong>
+                          for {{i.hrs}} Hrs per day </p>
+                      </td>
+                      <td  width="30%" style="width:30;  padding: 8px;   padding-bottom: 0px"  >
+                        <button type="button" class="btn btn-sm btn-warning" style="float:right; margin-top: -10px; margin-bottom: 0px"
+                          (click)="deleteItem($event, i.id)">X</button>
+                      </td>
+                    </tr>
+
+ 
+                </table>
+
+              </perfect-scrollbar>
+
+              <button type="button" style="width:100%" class="btn btn-success" data-toggle="modal" data-target="#modal-perday">SUBMIT</button>
+
+            </div>
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+
+<!-- ************************************************  per day   ******************************************************** -->
+
+<div class="modal fade" id="modal-perday" tabindex="-1" role="dialog" aria-labelledby="modal-domestic" style="display: none;"
+  aria-hidden="true">
+  <div class="modal-dialog modal-danger modal-dialog-centered modal-" role="document">
+    <div class="modal-content bg-gradient-danger">
+      <div class="modal-header">
+        <h6 class="modal-title" id="modal-title-notification">Send us your details</h6>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="py-3 text-center">
+          <i class="ni ni-bell-55 ni-3x"></i>
+          <h4 class="heading mt-4">Tell us who you are!</h4>
+
+
+          <form class="form" [formGroup]="emailModal">
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group mb-3">
+
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="Email" type="email" formControlName="email">
+
+                  </div>
+
+                  <div *ngIf="email.invalid && (email.dirty || email.touched)">
+                    <small *ngIf="email.errors.required">email required</small>
+                    <small *ngIf="email.invalid">email invalid</small>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="col-12">
+
+                <div class="form-group mb-3">
+
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="Your name " type="text" formControlName="name">
+                  </div>
+
+
+                  <div *ngIf="name.invalid && (name.dirty || name.touched)">
+                    <small *ngIf="name.errors.required">name required</small>
+                  </div>
+
+                </div>
+                <div class="form-group mb-3">
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-square-pin"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="Your Address" type="text" formControlName="address">
+                  </div>
+                </div>
+                <div class="form-group mb-3">
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-notification-70"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="Your Telephone" type="text" formControlName="telephone">
+                  </div>
+                 
+
+                  
+                  
+                </div>
+
+              </div>
+              <div class="col-12">
+
+                <div class="form-group mb-3">
+
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-chat-round"></i></span>
+                    </div>
+                    <textarea class="form-control"  formControlName="comment" placeholder="comment"></textarea>
+                  </div>
+
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" (click)="perdayEmail()" class="btn btn-white" [disabled]="emailModal.invalid"
+          data-dismiss="modal">Submit your details</button>
+        <button type="button" class="btn btn-link text-white ml-auto" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ************************************************ end of per day   ******************************************************** -->

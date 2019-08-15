@@ -1,0 +1,890 @@
+<main>
+  <section class="section section-lg">
+    <div class="container">
+      <div class="nav-wrapper">
+        <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-text" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link mb-sm-3 mb-md-0 active" id="tabs-text-1-tab" data-toggle="tab" href="#tabs-text-1" role="tab"
+              aria-controls="tabs-text-1" aria-selected="true">Domestic</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mb-sm-3 mb-md-0" id="tabs-text-4-tab" data-toggle="tab" href="#tabs-text-4" role="tab"
+              aria-controls="tabs-text-3" aria-selected="false">Gerneral</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link mb-sm-3 mb-md-0" id="tabs-text-2-tab" data-toggle="tab" href="#tabs-text-2" role="tab"
+              aria-controls="tabs-text-2" aria-selected="false">Industrial</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mb-sm-3 mb-md-0" id="tabs-text-3-tab" data-toggle="tab" href="#tabs-text-3" role="tab"
+              aria-controls="tabs-text-3" aria-selected="false">Hotel</a>
+          </li>
+  
+        </ul>
+      </div>
+      <div class="card shadow">
+        <div class="card-body">
+          <div class="tab-content" id="myTabContent">
+
+<!-- start of calculators -->
+
+
+<!-- start of domestic -->
+            <div class="tab-pane fade show active" id="tabs-text-1" role="tabpanel" aria-labelledby="tabs-text-1-tab">
+              <div class="row row-grid align-items-center">
+
+                <div class="col-md-6 order-md-1">
+                  <div class="pr-md-5">
+                    <div class="icon icon-lg icon-shape icon-shape-info shadow rounded-circle mb-5">
+                      <i class="ni ni-settings-gear-65"></i>
+                    </div>
+                    <h3>Estimation Calculator</h3>
+                    <p>This calculator will help you,</p>
+                    <ul class="list-unstyled mt-5">
+                      <li class="py-2">
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <div class="badge badge-circle badge-info mr-3">
+                              <i class="ni ni-settings-gear-65"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <h6 class="mb-0">To calculate your current Electricity bill</h6>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="py-2">
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <div class="badge badge-circle badge-info mr-3">
+                              <i class="ni ni-html5"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <h6 class="mb-0">To calculate the required number of panels</h6>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="py-2">
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <div class="badge badge-circle badge-info mr-3">
+                              <i class="ni ni-satisfied"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <h6 class="mb-0">To Decide having a battery backup</h6>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-6 order-md-2">
+                  <form [formGroup]="domestic">
+
+
+
+
+                    <input id="myRange" formControlName="slider" type="range" min="1" max="374" value="1" class="slider">
+                    <div class="row  " style="width:100%">
+                      <div class="  col-md-12 ">
+                        <small class="text-uppercase text-muted  ">details</small>
+                      </div>
+                      <div class="col-4">
+                        <a class="btn btn-link text-info">{{domesticData.kw}} kW</a>
+                      </div>
+                      <div class="col-4 ">
+                        <a class="btn btn-link text-info">{{domesticData.units}} units </a>
+                      </div>
+
+                      <div class="col-4">
+                        <a class="btn btn-link text-info">RS {{domesticData.price}}</a>
+                      </div>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input formControlName="insured" class="custom-control-input" id="customCheck1" type="checkbox">
+                      <label class="custom-control-label" for="customCheck1">Premises is insured ?</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input formControlName="battery"  class="custom-control-input" id="customCheck2" type="checkbox">
+                      <label class="custom-control-label" for="customCheck2">Battery power backup plan needed ?</label>
+                    </div>
+
+
+
+                    <button class="btn btn-1 btn-info" style="top:20px; float: right; " type="button" data-toggle="modal"
+                      data-target="#modal-domestic"> <span class="btn-inner--icon"><i class="ni ni-satisfied"></i></span>
+                      <span class="btn-inner--text"> Tell us and we will contact you</span></button>
+
+                  </form>
+                </div>
+
+
+              </div>
+
+            </div>
+<!-- start of industrial -->
+            <div class="tab-pane fade" id="tabs-text-2" role="tabpanel" aria-labelledby="tabs-text-2-tab">
+              <div class="row row-grid align-items-center">
+
+                <div class="col-md-6 order-md-1">
+                  <div class="pr-md-5">
+                    <div class="icon icon-lg icon-shape icon-shape-danger shadow rounded-circle mb-5">
+                      <i class="ni ni-settings-gear-65"></i>
+                    </div>
+                    <h3>Estimation Calculator</h3>
+                    <p>This calculator will help you,</p>
+                    <ul class="list-unstyled mt-5">
+                      <li class="py-2">
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <div class="badge badge-circle badge-danger mr-3">
+                              <i class="ni ni-settings-gear-65"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <h6 class="mb-0">To calculate your current Electricity bill</h6>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="py-2">
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <div class="badge badge-circle badge-danger mr-3">
+                              <i class="ni ni-html5"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <h6 class="mb-0">To calculate the required number of panels</h6>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="py-2">
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <div class="badge badge-circle badge-danger mr-3">
+                              <i class="ni ni-satisfied"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <h6 class="mb-0">To Decide having a battery backup</h6>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-6 order-md-2">
+                  <form [formGroup]="industrial">
+                    <input id="myRange" formControlName="slider" type="range" min="1" max="374" value="1" class="slider">
+
+                    <div class="row  " style="width:100%">
+                      <div class="  col-md-12 ">
+                        <small class="text-uppercase text-muted  ">details</small>
+                      </div>
+                      <div class="col-4">
+                        <a class="btn btn-link text-danger">{{industryData.kw}} kW</a>
+                      </div>
+                      <div class="col-4">
+                        <a class="btn btn-link text-danger">{{industryData.units}} units</a>
+                      </div>
+                      <div class="col-4 ">
+                        <a class="btn btn-link text-danger">RS {{industryData.price}}</a>
+
+                      </div>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input formControlName="insured" class="custom-control-input" id="customCheck5" type="checkbox">
+                      <label class="custom-control-label" for="customCheck5">Premises is insured ?</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input formControlName="battery" class="custom-control-input" id="customCheck6" type="checkbox">
+                      <label class="custom-control-label" for="customCheck6">Battery power backup plan needed ?</label>
+                    </div>
+
+
+
+                    <button class="btn btn-1 btn-danger" style="top:20px; float: right; " type="button" data-toggle="modal"
+                      data-target="#modal-industry"> <span class="btn-inner--icon"><i class="ni ni-satisfied"></i></span>
+                      <span class="btn-inner--text"> Tell us and we will contact you</span></button>
+
+                  </form>
+                </div>
+
+
+              </div>
+            </div>
+        <!-- start of hotel -->
+            <div class="tab-pane fade" id="tabs-text-3" role="tabpanel" aria-labelledby="tabs-text-3-tab">
+              <div class="row row-grid align-items-center">
+
+                <div class="col-md-6 order-md-1">
+                  <div class="pr-md-5">
+                    <div class="icon icon-lg icon-shape icon-shape-warning shadow rounded-circle mb-5">
+                      <i class="ni ni-settings-gear-65"></i>
+                    </div>
+                    <h3>Estimation Calculator</h3>
+                    <p>This calculator will help you,</p>
+                    <ul class="list-unstyled mt-5">
+                      <li class="py-2">
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <div class="badge badge-circle badge-warning mr-3">
+                              <i class="ni ni-settings-gear-65"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <h6 class="mb-0">To calculate your current Electricity bill</h6>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="py-2">
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <div class="badge badge-circle badge-warning mr-3">
+                              <i class="ni ni-html5"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <h6 class="mb-0">To calculate the required number of panels</h6>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="py-2">
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <div class="badge badge-circle badge-warning mr-3">
+                              <i class="ni ni-satisfied"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <h6 class="mb-0">To Decide having a battery backup</h6>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-6 order-md-2">
+                  <form [formGroup]="hotel">
+                    <input id="myRange" formControlName="slider" type="range" min="1" max="374" value="10" class="slider">
+                    <!-- <div style="height: 100px;display: flex;justify-content: center;">
+                            <input type="range" id="myRange" min="0" max="60" value="40" step="10"/>
+                          </div> -->
+
+
+                    <div class="row " style="width:100%">
+                      <div class="    col-md-12 ">
+                        <small class="text-uppercase text-muted font-weight-bold">details</small>
+                      </div>
+                      <div class="col-4">
+                        <a class="btn btn-link text-warning">{{hotelData.kw}} kW</a>
+                      </div>
+                      <div class="col-4">
+                        <a class="btn btn-link text-warning">{{hotelData.units}} units</a>
+                      </div>
+                      <div class="col-4">
+                        <a class="btn btn-link text-warning">RS {{hotelData.price}}</a>
+                      </div>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input formControlName="insured" class="custom-control-input" id="customCheck3" type="checkbox">
+                      <label class="custom-control-label" for="customCheck3">Premises is insured ?</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input formControlName="battery" class="custom-control-input" id="customCheck4" type="checkbox">
+                      <label class="custom-control-label" for="customCheck4">Battery power backup plan needed ?</label>
+                    </div>
+
+
+
+                    <button class="btn btn-1 btn-warning" style="top:20px; float: right; " type="button" data-toggle="modal"
+                      data-target="#modal-hotel"> <span class="btn-inner--icon"><i class="ni ni-satisfied"></i></span>
+                      <span class="btn-inner--text"> Tell us and we will contact you</span></button>
+
+                  </form>
+                </div>
+
+
+              </div>
+            </div>
+
+            <!-- start of general -->
+            <div class="tab-pane fade" id="tabs-text-4" role="tabpanel" aria-labelledby="tabs-text-4-tab">
+              <div class="row row-grid align-items-center">
+
+                <div class="col-md-6 order-md-1">
+                  <div class="pr-md-5">
+                    <div class="icon icon-lg icon-shape icon-shape-success shadow rounded-circle mb-5">
+                      <i class="ni ni-settings-gear-65"></i>
+                    </div>
+                    <h3>Estimation Calculator</h3>
+                    <p>This calculator will help you,</p>
+                    <ul class="list-unstyled mt-5">
+                      <li class="py-2">
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <div class="badge badge-circle badge-success mr-3">
+                              <i class="ni ni-settings-gear-65"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <h6 class="mb-0">To calculate your current Electricity bill</h6>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="py-2">
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <div class="badge badge-circle badge-success mr-3">
+                              <i class="ni ni-html5"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <h6 class="mb-0">To calculate the required number of panels</h6>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="py-2">
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <div class="badge badge-circle badge-success mr-3">
+                              <i class="ni ni-satisfied"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <h6 class="mb-0">To Decide having a battery backup</h6>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-6 order-md-2">
+                  <form [formGroup]="general">
+                    <input id="myRange" formControlName="slider" type="range" min="1" max="374" value="10" class="slider">
+                    <!-- <div style="height: 100px;display: flex;justify-content: center;">
+                            <input type="range" id="myRange" min="0" max="60" value="40" step="10"/>
+                          </div> -->
+
+
+                    <div class="row " style="width:100%">
+                      <div class="    col-md-12 ">
+                        <small class="text-uppercase text-muted font-weight-bold">details</small>
+                      </div>
+                      <div class="col-4">
+                        <a class="btn btn-link text-success">{{generalData.kw}} kW</a>
+                      </div>
+                      <div class="col-4">
+                        <a class="btn btn-link text-success">{{generalData.units}} units</a>
+                      </div>
+                      <div class="col-4">
+                        <a class="btn btn-link text-success">RS {{generalData.price}}</a>
+                      </div>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input formControlName="insured" class="custom-control-input" id="customCheck7" type="checkbox">
+                      <label class="custom-control-label" for="customCheck7">Premises is insured ?</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input formControlName="battery" class="custom-control-input" id="customCheck8" type="checkbox">
+                      <label class="custom-control-label" for="customCheck8">Battery power backup plan needed ?</label>
+                    </div>
+
+
+
+                    <button class="btn btn-1 btn-success" style="top:20px; float: right; " type="button" data-toggle="modal"
+                      data-target="#modal-general"> <span class="btn-inner--icon"><i class="ni ni-satisfied"></i></span>
+                      <span class="btn-inner--text"> Tell us and we will contact you</span></button>
+
+                  </form>
+                </div>
+
+
+              </div>
+            </div>
+
+
+
+<!-- end of calculators -->
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- ************************************************  domestic   ******************************************************** -->
+
+  <div class="modal fade" id="modal-domestic" tabindex="-1" role="dialog" aria-labelledby="modal-domestic" style="display: none;"
+    aria-hidden="true">
+    <div class="modal-dialog modal-danger modal-dialog-centered modal-" role="document">
+
+
+
+      <div class="modal-content bg-gradient-danger">
+        <div class="modal-header">
+          <h6 class="modal-title" id="modal-title-notification">Send us your details</h6>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <div class="py-3 text-center">
+            <i class="ni ni-bell-55 ni-3x"></i>
+            <h4 class="heading mt-4">Tell us who you are!</h4>
+
+
+            <form class="form" [formGroup]="emailModalDomestic">
+              <div class="row">
+                <div class="col-12">
+                  <div class="form-group mb-3">
+
+                    <div class="input-group input-group-alternative">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                      </div>
+                      <input class="form-control" placeholder="Email" type="email" formControlName="email">
+                    </div>
+                    <div *ngIf="emailModalDomesticEmail.invalid && (emailModalDomesticEmail.dirty || emailModalDomesticEmail.touched)">
+                      <small *ngIf="emailModalDomesticEmail.errors.required">email required</small>
+                      <small *ngIf="emailModalDomesticEmail.invalid">email invalid</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12">
+
+                  <div class="form-group mb-3">
+
+                    <div class="input-group input-group-alternative">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
+                      </div>
+                      <input class="form-control" placeholder="Your Name" type="text" formControlName="name">
+                    </div>
+                    <div *ngIf="emailModalDomesticName.invalid && (emailModalDomesticName.dirty || emailModalDomesticName.touched)">
+                      <small *ngIf="emailModalDomesticName.errors.required">name required</small>
+                    </div>
+
+                  </div>
+                  <div class="form-group mb-3">
+                    <div class="input-group input-group-alternative">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-square-pin"></i></span>
+                      </div>
+                      <input class="form-control" placeholder="Your Address" type="text" formControlName="address">
+                    </div>
+                  </div>
+                  <div class="form-group mb-3">
+                    <div class="input-group input-group-alternative">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-notification-70"></i></span>
+                      </div>
+                      <input class="form-control" placeholder="Your Telephone" type="text" formControlName="telephone">
+                    </div>
+                   
+
+                    
+                    
+                  </div>
+
+                </div>
+
+                <div class="col-12">
+
+                  <div class="form-group mb-3">
+
+                    <div class="input-group input-group-alternative">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-chat-round"></i></span>
+                      </div>
+                      <textarea class="form-control" formControlName="comment" placeholder="comment"></textarea>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" (click)="domesticEmail()" class="btn btn-white" [disabled]="emailModalDomestic.invalid"
+            data-dismiss="modal">Submit your details</button>
+          <button type="button" class="btn btn-link text-white ml-auto" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <!-- ************************************************ end of domestic   ******************************************************** -->
+
+
+
+
+
+
+
+
+
+
+
+  <!-- ************************************************  industry   ******************************************************** -->
+
+  <div class="modal fade" id="modal-industry" tabindex="-1" role="dialog" aria-labelledby="modal-industry" style="display: none;"
+    aria-hidden="true">
+    <div class="modal-dialog modal-danger modal-dialog-centered modal-" role="document">
+
+
+
+      <div class="modal-content bg-gradient-danger">
+        <div class="modal-header">
+          <h6 class="modal-title" id="modal-title-notification">Send us your details</h6>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <div class="py-3 text-center">
+            <i class="ni ni-bell-55 ni-3x"></i>
+            <h4 class="heading mt-4">Tell us who you are!</h4>
+
+
+            <form class="form" [formGroup]="emailModalIndustry">
+              <div class="row">
+                <div class="col-12">
+                  <div class="form-group mb-3">
+
+                    <div class="input-group input-group-alternative">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                      </div>
+                      <input class="form-control" placeholder="Email" type="email" formControlName="email">
+                    </div>
+                    <div *ngIf="emailModalIndustryEmail.invalid && (emailModalIndustryEmail.dirty || emailModalIndustryEmail.touched)">
+                      <small *ngIf="emailModalIndustryEmail.errors.required">email required</small>
+                      <small *ngIf="emailModalIndustryEmail.invalid">email invalid</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12">
+
+                  <div class="form-group mb-3">
+
+                    <div class="input-group input-group-alternative">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
+                      </div>
+                      <input class="form-control" placeholder="Your Name" type="text" formControlName="name">
+                    </div>
+                    <div *ngIf="emailModalIndustryName.invalid && (emailModalIndustryName.dirty || emailModalIndustryName.touched)">
+                      <small *ngIf="emailModalIndustryName.errors.required">name required</small>
+                    </div>
+
+                  </div>
+                  <div class="form-group mb-3">
+                    <div class="input-group input-group-alternative">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-square-pin"></i></span>
+                      </div>
+                      <input class="form-control" placeholder="Your Address" type="text" formControlName="address">
+                    </div>
+                  </div>
+                  <div class="form-group mb-3">
+                    <div class="input-group input-group-alternative">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-notification-70"></i></span>
+                      </div>
+                      <input class="form-control" placeholder="Your Telephone" type="text" formControlName="telephone">
+                    </div>
+                   
+                    
+                    
+                  </div>
+
+                </div>
+
+                <div class="col-12">
+
+                  <div class="form-group mb-3">
+
+                    <div class="input-group input-group-alternative">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-chat-round"></i></span>
+                      </div>
+                      <textarea class="form-control" formControlName="comment" placeholder="comment"></textarea>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" (click)="industryEmail()" class="btn btn-white" [disabled]="emailModalIndustry.invalid"
+            data-dismiss="modal">Submit your details</button>
+          <button type="button" class="btn btn-link text-white ml-auto" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <!-- ************************************************ end of industry   ******************************************************** -->
+
+
+
+
+
+
+  <!-- ************************************************  hotel   ******************************************************** -->
+
+  <div class="modal fade" id="modal-hotel" tabindex="-1" role="dialog" aria-labelledby="modal-hotel" style="display: none;"
+    aria-hidden="true">
+    <div class="modal-dialog modal-danger modal-dialog-centered modal-" role="document">
+
+
+
+      <div class="modal-content bg-gradient-danger">
+        <div class="modal-header">
+          <h6 class="modal-title" id="modal-title-notification">Send us your details</h6>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <div class="py-3 text-center">
+            <i class="ni ni-bell-55 ni-3x"></i>
+            <h4 class="heading mt-4">Tell us who you are!</h4>
+
+
+            <form class="form" [formGroup]="emailModalHotel">
+              <div class="row">
+                <div class="col-12">
+                  <div class="form-group mb-3">
+
+                    <div class="input-group input-group-alternative">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                      </div>
+                      <input class="form-control" placeholder="Email" type="email" formControlName="email">
+                    </div>
+                    <div *ngIf="emailModalHotelEmail.invalid && (emailModalHotelEmail.dirty || emailModalHotelEmail.touched)">
+                      <small *ngIf="emailModalHotelEmail.errors.required">email required</small>
+                      <small *ngIf="emailModalHotelEmail.invalid">email invalid</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12">
+
+                  <div class="form-group mb-3">
+
+                    <div class="input-group input-group-alternative">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
+                      </div>
+                      <input class="form-control" placeholder="Your Name" type="text" formControlName="name">
+                    </div>
+
+                    <div *ngIf="emailModalHotelName.invalid && (emailModalHotelName.dirty || emailModalHotelName.touched)">
+                      <small *ngIf="emailModalHotelName.errors.required">name required</small>
+                    </div>
+
+
+                  </div>
+                  <div class="form-group mb-3">
+                    <div class="input-group input-group-alternative">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-square-pin"></i></span>
+                      </div>
+                      <input class="form-control" placeholder="Your Address" type="text" formControlName="address">
+                    </div>
+                  </div>
+                  <div class="form-group mb-3">
+                    <div class="input-group input-group-alternative">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-notification-70"></i></span>
+                      </div>
+                      <input class="form-control" placeholder="Your Telephone" type="text" formControlName="telephone">
+                    </div>
+                    
+
+
+                    
+                  </div>
+
+                </div>
+
+                <div class="col-12">
+
+                  <div class="form-group mb-3">
+
+                    <div class="input-group input-group-alternative">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-chat-round"></i></span>
+                      </div>
+                      <textarea class="form-control" formControlName="comment" placeholder="comment"></textarea>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" (click)="hotelEmail()" class="btn btn-white" [disabled]="emailModalHotel.invalid"
+            data-dismiss="modal">Submit your details</button>
+          <button type="button" class="btn btn-link text-white ml-auto" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <!-- ************************************************ end of hotel   ******************************************************** -->
+
+
+<!--**************************************************************** General *****************************************************-->
+
+<div class="modal fade" id="modal-general" tabindex="-1" role="dialog" aria-labelledby="modal-general" style="display: none;"
+aria-hidden="true">
+<div class="modal-dialog modal-danger modal-dialog-centered modal-" role="document">
+
+
+
+  <div class="modal-content bg-gradient-danger">
+    <div class="modal-header">
+      <h6 class="modal-title" id="modal-title-notification">Send us your details</h6>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">×</span>
+      </button>
+    </div>
+    <div class="modal-body">
+
+      <div class="py-3 text-center">
+        <i class="ni ni-bell-55 ni-3x"></i>
+        <h4 class="heading mt-4">Tell us who you are!</h4>
+
+
+        <form class="form" [formGroup]="emailModalGeneral">
+          <div class="row">
+            <div class="col-12">
+              <div class="form-group mb-3">
+
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="Email" type="email" formControlName="email">
+                </div>
+                <div *ngIf="emailModalGeneralEmail.invalid && (emailModalGeneralEmail.dirty || emailModalGeneralEmail.touched)">
+                  <small *ngIf="emailModalGeneralEmail.errors.required">email required</small>
+                  <small *ngIf="emailModalGeneralEmail.invalid">email invalid</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+
+              <div class="form-group mb-3">
+
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="Your Name" type="text" formControlName="name">
+                </div>
+                <div *ngIf="emailModalGeneralName.invalid && (emailModalGeneralName.dirty || emailModalGeneralName.touched)">
+                  <small *ngIf="emailModalGeneralName.errors.required">Name required</small>
+                </div>
+              </div>
+              <div class="form-group mb-3">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-square-pin"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="Your Address" type="text" formControlName="address">
+                </div>
+              </div>
+              <div class="form-group mb-3">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-notification-70"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="Your Telephone " type="text" formControlName="telephone">
+                </div>
+
+
+               
+              </div>
+
+            </div>
+
+            <div class="col-12">
+
+              <div class="form-group mb-3">
+
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-chat-round"></i></span>
+                  </div>
+                  <textarea class="form-control" formControlName="comment" placeholder="comment "></textarea>
+                </div>  
+
+              </div> 
+
+
+
+
+            </div>
+
+          </div>
+
+        </form>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" (click)="generalEmail()" class="btn btn-white" [disabled]="emailModalGeneral.invalid"
+        data-dismiss="modal">Submit your details</button>
+      <button type="button" class="btn btn-link text-white ml-auto" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+
+
+</div>
+</div>
+
+</main>

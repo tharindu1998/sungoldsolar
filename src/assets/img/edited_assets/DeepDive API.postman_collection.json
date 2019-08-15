@@ -1,0 +1,216 @@
+{
+	"info": {
+		"_postman_id": "51dfe104-b4ad-f786-5574-025982b1b77c",
+		"name": "DeepDive API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Account-Controller",
+			"item": [
+				{
+					"name": "Get All Accounts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://192.168.1.101:8080/api/accounts?access_token=bdd4b903-8f81-4098-8592-da652b80334a",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"1",
+								"101"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"accounts"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "bdd4b903-8f81-4098-8592-da652b80334a"
+								}
+							]
+						},
+						"description": "list of accounts registered as members"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OAuth2",
+			"item": [
+				{
+					"name": "OAuth2 token request",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "defaultUser",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "defaultPassword",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "implicit",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "grant_type",
+									"value": "implicit",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.1.101:8080/oauth/token",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"1",
+								"101"
+							],
+							"port": "8080",
+							"path": [
+								"oauth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SMS-Auth",
+			"item": [
+				{
+					"name": "Send Verification",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://api.authy.com/protected/json/phones/verification/check?api_key=9qFO3DULp6l2679t6M5maFpbsA11f0Y1&via=sms&phone_number=766616288&country_code=94",
+							"protocol": "https",
+							"host": [
+								"api",
+								"authy",
+								"com"
+							],
+							"path": [
+								"protected",
+								"json",
+								"phones",
+								"verification",
+								"check"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "9qFO3DULp6l2679t6M5maFpbsA11f0Y1"
+								},
+								{
+									"key": "via",
+									"value": "sms"
+								},
+								{
+									"key": "phone_number",
+									"value": "766616288"
+								},
+								{
+									"key": "country_code",
+									"value": "94"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "secret",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "admin-user",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "7133df24-45c9-43e6-b13d-01363f3ab776",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "9f8af4eb-f971-4e1e-827b-9702033f745d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
